@@ -9,7 +9,9 @@
     "start:mock-server": "cd ./server && npm start",
     "postinstall": "cd ./server && npm i",
     "test": "jest -c ./config/test/jest.json --verbose",
-    "test:watch": "npm run test -- --watchAll -i"
+    "test:watch": "npm run test -- --watchAll -i",
+    "pretest:coverage": "rimraf coverage",
+    "test:coverage": "jest -c ./config/test/jest.coverage.json"
   },
   "author": "",
   "license": "ISC",
@@ -30,6 +32,7 @@
     "jest": "^25.2.7",
     "npm-run-all": "^4.1.5",
     "react-test-renderer": "^16.13.1",
+    "rimraf": "^3.0.2",
     "ts-jest": "^25.3.0",
     "typescript": "^3.7.5",
     "url-loader": "^3.0.0",

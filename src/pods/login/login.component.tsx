@@ -27,7 +27,7 @@ export const LoginComponent: React.FunctionComponent<Props> = props => {
   const { onLogin, initialLogin } = props;
 
   return (
-    <Card>
+    <Card data-testid="card">
       <CardHeader title="Login" />
       <CardContent>
         <div className={classes.formContainer}>
@@ -35,7 +35,7 @@ export const LoginComponent: React.FunctionComponent<Props> = props => {
             onSubmit={values => onLogin(values)}
             initialValues={initialLogin}
             render={({ handleSubmit, submitting, pristine, values }) => (
-              <form onSubmit={handleSubmit} noValidate>
+              <form onSubmit={handleSubmit} noValidate data-testid="form">
                 <Field
                   fullWidth
                   name="login"
@@ -56,7 +56,7 @@ export const LoginComponent: React.FunctionComponent<Props> = props => {
                     formValidation.validateField(meta.name, value)
                   }
                 />
-                <Button type="submit" variant="contained" color="primary">
+                <Button type="submit" variant="contained" color="primary" data-testid="button">
                   Login
                 </Button>
               </form>
