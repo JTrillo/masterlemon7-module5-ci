@@ -155,3 +155,25 @@ install:
 script:
   - npm test
 ```
+
+### 7. Add circle-ci coverage
+We only have to create `config.yml` file under folder `.circle.ci`. Its content should be:
+```yml
+version: 2.1
+orbs:
+  node: circleci/node@1.1.6
+jobs:
+  build-and-test:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - run: npm install
+            - run: npm test
+workflows:
+    build-and-test:
+      jobs:
+        - build-and-test
+```
