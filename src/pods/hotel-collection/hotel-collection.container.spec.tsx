@@ -16,7 +16,7 @@ describe("Hotel collection container specs", () => {
     expect(hotels.length).toStrictEqual(0);
   });
 
-  it("should display two hotels after useEffect", async () => {
+  it("should display two hotels after useEffect", () => {
     // Arrange
     const loadHotelCollectionSpy = jest.fn();
     const useHotelCollectionStub = jest
@@ -45,9 +45,10 @@ describe("Hotel collection container specs", () => {
 
     // Act
     const { getAllByTestId } = render(<HotelCollectionContainer />);
-    const hotels = await waitForElement(() => getAllByTestId("hotel-card"));
+    const hotels = getAllByTestId("hotel-card");
 
     // Assert
+    expect(useHotelCollectionStub).toHaveBeenCalled();
     expect(loadHotelCollectionSpy).toHaveBeenCalled();
     expect(hotels.length).toStrictEqual(2);
   });
