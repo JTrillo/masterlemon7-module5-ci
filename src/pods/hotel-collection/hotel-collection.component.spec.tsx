@@ -42,14 +42,12 @@ describe('Hotel collection component specs', () => {
     };
 
     // Act
-    const { getByTestId } = render(<HotelCollectionComponent {...props} />)
+    const { getByTestId, queryAllByTestId } = render(<HotelCollectionComponent {...props} />)
     const divElement = getByTestId("list-div") as HTMLDivElement;
-    const hotel1Element = getByTestId("hotel1");
-    const hotel2Element = getByTestId("hotel2");
+    const hotels = queryAllByTestId("hotel-card")
 
     // Assert
     expect(divElement).toBeInTheDocument();
-    expect(hotel1Element).toBeInTheDocument();
-    expect(hotel2Element).toBeInTheDocument();
+    expect(hotels.length).toStrictEqual(2);
   });
 });

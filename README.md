@@ -109,7 +109,9 @@ We have to modifiy original auto created content with this content
 * [common/components/forms/text-field.spec.tsx](./src/common/components/forms/text-field.spec.tsx)
 * [pods/hotel-collection/hotel-collection.hook.spec.ts](./src/pods/hotel-collection/hotel-collection.hook.spec.ts)
 * [pods/login/login.component.spec.tsx](./src/pods/login/login.component.spec.tsx)
+* [pods/login/login.container.spec.tsx](./src/pods/login/login.container.spec.tsx)
 * [pods/hotel-collection/hotel-collection.component.spec.tsx](./src/pods/hotel-collection/hotel-collection.component.spec.tsx)
+* [pods/hotel-collection/hotel-collection.container.spec.tsx](./src/pods/hotel-collection/hotel-collection.container.spec.tsx)
 
 ### 5. Add coverage configuration
 * Create file `./config/test/jest.coverage.json`. Is almost the same as `jest.json`.

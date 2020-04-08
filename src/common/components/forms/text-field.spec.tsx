@@ -52,7 +52,7 @@ describe('Text Field common component specs', () => {
     const { getByTestId } = render(<TextField {...props} />);
     const divElement = getByTestId("muiDiv") as HTMLDivElement;
     const inputElement = getByTestId("muiInput") as HTMLInputElement;
-    const errorElement = divElement.children[1];
+    const errorElement = divElement.childNodes[1] as HTMLParagraphElement;
 
     // Assert
     expect(divElement).toBeInTheDocument();
