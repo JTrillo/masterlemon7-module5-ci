@@ -2,6 +2,7 @@
 Lemoncode Front-End Master, 7th edition. Module 5 exercise.
 
 [![Build Status](https://travis-ci.com/JTrillo/masterlemon7-module5-ci.svg?branch=master)](https://travis-ci.com/JTrillo/masterlemon7-module5-ci)
+[![JTrillo](https://circleci.com/gh/JTrillo/masterlemon7-module5-ci.svg?style=svg)](https://circleci.com/gh/JTrillo/masterlemon7-module5-ci.svg?style=svg)
 
 ## Steps followed
 
